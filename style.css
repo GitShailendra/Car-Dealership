@@ -604,3 +604,135 @@
    font-size: 1.5rem;
    color: black;
 }
+/* Add these media queries to your existing CSS */
+#menu-btn {
+   display: none; /* Hidden by default for desktop */
+   font-size: 2.5rem;
+   cursor: pointer;
+   color: #333;
+}
+
+@media (max-width: 991px) {
+   html {
+     font-size: 55%;
+   }
+ 
+   .header {
+     padding: 2rem;
+   }
+ 
+   .header.active {
+     padding: 2rem;
+   }
+ 
+   section {
+     padding: 2rem;
+   }
+ 
+   .home img {
+     padding-right: 0;
+   }
+ }
+ 
+ @media (max-width: 768px) {
+   .header #login-btn i {
+     display: block;
+   }
+   #menu-btn {
+      display: block; /* Show menu button on mobile */
+  }
+ 
+   .header #login-btn .btn {
+     display: none;
+   }
+ 
+   .header .navbar {
+     position: absolute;
+     top: 99%;
+     left: 0;
+     right: 0;
+     background: #fff;
+     border-top: var(--border);
+     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+     transition: .2s linear;
+   }
+ 
+   .header .navbar.active {
+     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+ 
+   .header .navbar a {
+     margin: 2rem;
+     display: block;
+     font-size: 2rem;
+   }
+ 
+   .home h1 {
+     font-size: 3.5rem;
+   }
+ 
+   .newsletter form {
+     max-width: 45rem;
+   }
+ 
+   .featured .featured-slidebar .box {
+     margin: 2rem 0;
+   }
+ 
+   #boxx {
+     width: auto;
+   }
+ 
+   .featured .featured-slidebar .box img {
+     height: auto;
+     width: 90%;
+   }
+ 
+   .contact .row {
+     flex-direction: column;
+   }
+ 
+   .contact .row .map {
+     height: 30rem;
+   }
+ }
+ 
+ @media (max-width: 450px) {
+   html {
+     font-size: 50%;
+   }
+ 
+   .heading {
+     font-size: 3rem;
+   }
+ 
+   .featured .featured-slidebar .box img {
+     width: 100%;
+   }
+ 
+   .vehicles .vehicle-slidebar .box {
+     width: 100%;
+   }
+ 
+   .services .box-container .box {
+     padding: 2rem;
+   }
+ 
+   .contact .row form .box,
+   .contact .row form textarea {
+     width: 100%;
+   }
+ 
+   .footer .box-container {
+     grid-template-columns: 1fr;
+   }
+ 
+   #bosc {
+     flex-direction: column;
+     text-align: center;
+   }
+ 
+   .footer .box-container .box {
+     padding: 1.5rem;
+   }
+ }
